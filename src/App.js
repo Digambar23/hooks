@@ -1,21 +1,24 @@
-import useState from 'react'
+
 import './App.css';
+import { StateTutorial } from './components/StateTutorial';
 
 function App() {
-   const[count,setCount]=useState(0)
+  //  const[count,setCount]=useState(0)
 
-   function decrementCount()   {                                  
-    setCount(count-1)
-  }    
-  function incrementCount() {
-    setCount(count+1)                               
-  }
+  //  function decrementCount =(e)=>  {                                  
+  //   setCount(count-1)
+  // }    
+  // function incrementCount=(e)=> {
+  //   setCount(count+1)                               
+  // }
 
   return (
    <>
-   <button  onClick={decrementCount} >-</button>
+
+   <StateTutorial/>
+   {/* <button  onClick={decrementCount} >-</button>
    <span>  {count}  </span>
-   <button onClick={incrementCount}>+</button>
+   <button onClick={incrementCount}>+</button> */}
    </>
   );
 }
