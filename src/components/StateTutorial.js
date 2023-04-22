@@ -1,8 +1,14 @@
-import React, { useState } from 'react'
+import React, { useEffect, useState } from 'react'
 
 export const StateTutorial = () => {
 
-const[inputValue,newChangeValue]=useState("Digambar")
+const[inputValue,newChangeValue]=useState("Bhai")
+
+useEffect(()=>{
+  setTimeout(()=>{
+    newChangeValue((inputValue)=>inputValue+1);
+  },[1000])
+});
 
 const onChange=(event)=>{
     const newVal=event.target.value
@@ -14,7 +20,7 @@ const onChange=(event)=>{
   return (
     <div>
         <h1>{inputValue} </h1>
-        <input type='text' value={inputValue} Placeholder='type something....' onChange={onChange}></input>
+        <input type='text' value={inputValue} placeholder='type something....' onChange={onChange}></input>
     </div>
   )
 }
